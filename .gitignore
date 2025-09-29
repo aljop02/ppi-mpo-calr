@@ -28,4 +28,37 @@ __pycache__/
 *.err
 *.gro        # can be huge, keep only processed
 *.pdb        # only keep curated inputs in data/
-*.mdp~       # t*
+*.mdp~       # temp backup files
+
+md/runs/*
+md/logs/*
+md/analysis/raw/*
+
+# -------------------------
+# HADDOCK3 outputs
+# -------------------------
+docking/results_raw/*
+docking/tmp/*
+*.out
+*.err
+
+# -------------------------
+# CHARMM-GUI raw builds
+# -------------------------
+data/membranes/*
+!data/membranes/.gitkeep   # keep folder placeholder
+
+# -------------------------
+# Energetics heavy raw data
+# -------------------------
+energetics/mmpbsa/raw/*
+energetics/pmf/raw/*
+energetics/results/tmp/*
+
+# -------------------------
+# Results
+# -------------------------
+results/*/*
+!results/docking_summary/
+!results/md_summary/
+!results/energetics_summary/
