@@ -1,0 +1,31 @@
+# -------------------------
+# General system clutter
+# -------------------------
+.DS_Store
+Thumbs.db
+__pycache__/
+*.pyc
+*.swp
+*.bak
+
+# -------------------------
+# Conda / environments
+# -------------------------
+*.lock
+*.yml~
+.env/
+
+# -------------------------
+# GROMACS / MD outputs
+# -------------------------
+*.xtc        # trajectory
+*.trr        # full precision trajectory
+*.edr        # energy file
+*.cpt        # checkpoint
+*.tpr        # run input (can regenerate)
+*.log        # run logs
+*.out
+*.err
+*.gro        # can be huge, keep only processed
+*.pdb        # only keep curated inputs in data/
+*.mdp~       # t*
