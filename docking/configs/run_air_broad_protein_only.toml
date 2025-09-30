@@ -1,0 +1,33 @@
+# ==========================================================
+# AIR-guided docking: MPO protein-only (no HEME/Ca2+)
+# ==========================================================
+
+run_dir = "docking/results_raw/run_air_broad_protein_only"
+mode = "local"
+debug = true
+concat = 50
+queue_limit = 240
+ncores = 24
+
+molecules = [
+  "data/proteins/processed/MPO_ABCD_protein_only.pdb",
+  "data/proteins/processed/CALR_chainE_clean.pdb"
+]
+
+[topoaa]
+autohis = false
+
+[rigidbody]
+sampling   = 20000      # start here; can scale to 100000 later
+tolerance  = 99.0
+w_desolv   = 0.5
+w_air      = 0.3
+w_bsa      = 0.0
+ambig_fname = "docking/configs/ambig_broad.tbl"
+
+[seletop]
+select = 400
+
+[clustfcc]
+min_population = 4
+clust_cutoff   = 0.6
