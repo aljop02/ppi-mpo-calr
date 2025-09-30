@@ -1,0 +1,4 @@
+MPO: chains A,B,C,D (receptor)
+CALR: chain E (ligand)
+Heme: residue name HEM (HETATM)
+Calcium: residue name CAL (HETATM)

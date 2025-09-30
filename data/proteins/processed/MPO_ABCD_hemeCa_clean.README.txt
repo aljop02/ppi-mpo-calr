@@ -1,0 +1,1 @@
+MPO: chains A/B/C/D kept; HEM/HEC kept; structural Ca2+ kept as CAL; waters/sugars/Cl- removed; altloc pruned; MSE->MET, CSO->CYS; hydrogens removed.
