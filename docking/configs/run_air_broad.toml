@@ -6,7 +6,7 @@ queue_limit = 240
 ncores = 24
 
 molecules = [
-  "data/proteins/processed/MPO_ABCD_protein_only.pdb",   # use protein-only if HETATM run keeps failing
+  "data/proteins/processed/MPO_ABCD_hemeCa_clean_fixed.pdb",
   "data/proteins/processed/CALR_chainE_clean.pdb"
 ]
 
