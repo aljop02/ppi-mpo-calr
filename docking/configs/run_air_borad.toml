@@ -1,0 +1,29 @@
+run_dir = "docking/results_raw/run_air_broad"
+mode = "local"
+debug = true
+concat = 10
+queue_limit = 240
+ncores = 24
+
+molecules = [
+  "data/proteins/processed/MPO_ABCD_protein_only.pdb",   # use protein-only if HETATM run keeps failing
+  "data/proteins/processed/CALR_chainE_clean.pdb"
+]
+
+[topoaa]
+autohis = false
+
+[rigidbody]
+sampling   = 10000
+tolerance  = 95.0
+w_desolv   = 1.0
+w_air      = 0.3
+w_bsa      = 0.0
+ambig_fname = "docking/configs/ambig_broad.tbl"
+
+[seletop]
+select = 200
+
+[clustfcc]
+min_population = 4
+clust_cutoff   = 0.6
