@@ -1,0 +1,40 @@
+# Restrained, high-sampling docking of MPO vs CALR
+run_dir = "docking/results_raw/run_restrained_big"
+ncores = 24
+
+molecules = [
+    "data/proteins/processed/MPO_A.pdb",
+    "data/proteins/processed/CALR_B.pdb",
+]
+
+[topoaa]
+autohis = false
+
+[rigidbody]
+# go big on sampling
+sampling = 50000
+tolerance = 50
+ambig_fname = "docking/configs/ambig.tbl"
+
+[seletop]
+# refine a lot more than before
+mode = 1000
+
+[flexref]
+ambig_fname = "docking/configs/ambig.tbl"
+
+[emref]
+ambig_fname = "docking/configs/ambig.tbl"
+
+[clustfcc]
+# slightly permissive clustering so we don't miss families
+contact_distance_cutoff = 5.0
+clust_cutoff = 0.6
+strictness = 0.75
+min_population = 2
+
+[seletopclusts]
+# keep more clusters for final scoring
+mode = 20
+
+[emscoring]

@@ -1,0 +1,35 @@
+run_dir = "docking/results_raw/run_mpo_calr_blind"
+ncores = 24
+
+molecules = [
+    "data/proteins/processed/MPO_A.pdb",
+    "data/proteins/processed/CALR_B.pdb",
+]
+
+[topoaa]
+log_level = "normal"
+
+[rigidbody]
+sampling = 2000
+tolerance = 99        # allow all jobs through, don’t abort
+log_level = "normal"
+ranair = true          # random ambiguous restraints (ab-initio docking)
+ntrials = 50           # number of random AIR sets
+
+[seletop]
+mode = 200             # keep top 200 rigid-body models
+
+[flexref]
+log_level = "normal"
+
+[emref]
+log_level = "normal"
+
+[clustfcc]
+min_population = 3     # minimum cluster size for fcc clustering
+
+[seletopclusts]
+mode = 10              # keep top 10 clusters
+
+[emscoring]
+log_level = "normal"
