@@ -6,8 +6,9 @@
 run_dir = "docking/results_raw/run_keep_hetatm"
 mode = "local"
 debug = true
-concat = 1
-queue_limit = 24       # matches your 24 CPU threads
+concat = 10
+queue_limit = 24
+ncores = 24       # matches 24 CPU threads change accordingly to system specs
 
 molecules = [
   "data/proteins/processed/MPO_ABCD_hemeCa_clean_fixed.pdb",
